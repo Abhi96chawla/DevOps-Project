@@ -8,4 +8,5 @@ WORKDIR /opt/app
 COPY ${artifact} app.jar
 
 Expose 3000
+
 ENTRYPOINT ["java","-jar","app.jar"]
