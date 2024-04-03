@@ -6,11 +6,18 @@ pipeline {
     }
   }
   stages {
+     stage('Clean Workspace') {
+        steps {
+            cleanWs()
+      }
+  }
+
     stage('Git Checkout') {
       steps {
           git branch: 'main', url: 'https://github.com/DeepakChandMarthala/DevOps-Project.git'
       }
     }
+
     stage('Build') {
       steps {
         // build the project and create a JAR file
