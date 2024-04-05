@@ -17,6 +17,7 @@ stages
     stage('Simple Stage') {
       steps {
         echo 'This is a simple stage with an echo command'
+        
       }
     }
 
@@ -31,6 +32,7 @@ stages
       {
         script 
         {
+            sh whoami
             sh "docker build -t ${DOCKER_IMAGE} ."
             def dockerImage = docker.image("${DOCKER_IMAGE}")
             docker.withRegistry('', "docker-cred") 
