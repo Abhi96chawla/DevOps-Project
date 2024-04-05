@@ -6,7 +6,8 @@ pipeline {
     }
   }
 
-stages {
+stages 
+{
   stage('Clean Workspace') 
   {
         steps {
@@ -39,7 +40,7 @@ stages {
         }
       }
     }
-  
+  }
 }
 
 /*
